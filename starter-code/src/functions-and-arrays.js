@@ -169,6 +169,30 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct (matrix) {
-  git 
+function greatestProduct(matrixOfNumbers){
+  let max=0
+  let result=0
+  for (let i=0;i<matrixOfNumbers.length;i++){ //Loop each array in array
+    for (let j=0;j<matrixOfNumbers[i].length;j++){//Loop each element in array within array
+      if((j-3)>=0){
+        result=(matrixOfNumbers[i][j] * matrixOfNumbers[i][j - 1] * matrixOfNumbers[i][j - 2] * matrixOfNumbers[i][j - 3])
+        if (max<result){
+          max=result
+        }
+      }
+      if((i-3)>=0){
+        (matrixOfNumbers[i][j] * matrixOfNumbers[i][j - 1] * matrixOfNumbers[i][j - 2] * matrixOfNumbers[i][j - 3])
+        if (max<result){
+          max=result
+        }
+      }
+      if((i-3)>=0 && (j-3)>=0) {
+        (matrixOfNumbers[i][j] * matrixOfNumbers[i][j - 1] * matrixOfNumbers[i][j - 2] * matrixOfNumbers[i][j - 3])
+        if (max<result){
+          max=result
+        }
+      }
+    }
+  }
+  return max
 }
